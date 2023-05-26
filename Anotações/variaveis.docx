@@ -101,6 +101,20 @@ Identificadores{
 
 }
 
-Tratamento de Dados
+Tratamento de Dados{
+
+    Conversão de Dados{
+        STRING --> NUMBER
+
+            Number.parseInt(n)
+            Number.parseFloat(n)
+            Number(n)
+        
+        NUMBER --> STRING
+
+            String(n)
+            n.toString()
+    }
+}
 
 
