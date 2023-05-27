@@ -146,5 +146,50 @@ Tratamento de Dados{
             'O aluno Juca de 32 anos, tirou a nota 9.4 na prova.'
         
     }
+
+    Formatação de Números{
+
+        DEFININDO NÚMERO DE CASAS DECIMAIS
+
+        --> x.toFixed(n) <--
+
+            --------EXEMPLO---------
+
+            > var n1 = 1547.9032
+            undefined
+            > n1
+            1547.9032
+            > n1.toFixed(2)
+            > n1
+            1547.9032
+            > n1.toFixed(2)
+            '1547.90'
+            > n1.toFixed(2).replace('.' , ',')
+            '1547,90'
+
+        DEFININDO NÚMEROS COMO MOEDAS
+        
+        --> x.toLocaleString('pt-BR("ou outro")', {style: 'currency', currency: 'BRL("ou  outro")'}) <--
+
+            --------EXEMPLO---------
+
+            > var sal = 1346.98
+            undefined
+            > sal
+            1346.98
+            > sal
+            1475.09348
+            > sal.toFixed(2)
+            '1475.09'
+            > sal.toFixed(2).replace('.' , ',')
+            '1475,09'
+            > sal.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})
+            'R$ 1.475,09'
+            > sal.toLocaleString('pt-BR',{style: 'currency', currency: 'USD'})
+            'US$ 1.475,09'
+            > sal.toLocaleString('pt-BR',{style: 'currency', currency: 'EUR'})
+            '€ 1.475,09'
+            
+    }
 }
 
