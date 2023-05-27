@@ -115,6 +115,36 @@ Tratamento de Dados{
             String(n)
             n.toString()
     }
-}
 
+    Formatação de Strings{
+
+        var s = "JavaScript"
+
+        'Eu estou aprendendo s' => NÃO FAZ INTERPOLAÇÃO
+        'Eu estou aprendendo' + s => USA DA CONCATENAÇÃO
+        `Eu estou aprendendo ${s}` => USA TEMPLATE STRING
+
+        ----------------------EXEMPLO--------------------------------
+
+        VARIÁVEIS
+
+            > nome = 'Juca'
+            'Juca'
+            > idade = 32
+            32
+            > nota = 9.4
+            9.4
+
+        CONCATENAÇÃO
+
+            > 'O aluno ' + nome + ' de ' + idade + ' anos, tirou ' + nota + ' na prova.'
+            'O aluno Juca de 32 anos, tirou 9.4 na prova.'
+        
+        TEMPLATE STRING  // (uso de crase pra definir um template)
+        
+            > `O aluno ${nome} de ${idade} anos, tirou a nota ${nota} na prova.`
+            'O aluno Juca de 32 anos, tirou a nota 9.4 na prova.'
+        
+    }
+}
 
