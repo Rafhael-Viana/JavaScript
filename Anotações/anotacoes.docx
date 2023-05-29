@@ -1,0 +1,338 @@
+1 '=' significa "Recebe" (sinal de atribuição)
+
+2 '==' significa "Igual" (sinal de comparação)
+
+Variáveis = Container de Dados
+
+Variáveis{
+
+    As variáveis 'var' e 'let' podem ser atualizadas retirando o primeiro valor e atribuindo um novo valor.
+
+    As variáveis podem receber também valores nulos através da atribuição 'null'.
+
+    Variáveis tem tamanhos diferentes para receber dados de tamanhos diferentes.
+
+
+    Tipos de Variáveis{
+
+        -----------------------------"typeof" (tipo de variável)-----------------------------
+
+            Number = variáveis numéricas
+                Infinity
+                NaN (Not a Number)
+
+            String = cadeia de caracteres.{
+
+                =>  Existem três formas de delimitar uma string: "Aspas Duplas", 'Aspas Simples' e `Crase`. <=
+            }
+            
+            Boolean = true or false
+
+            null
+
+            undefined
+
+            object
+                Array
+
+            function
+
+        -------------------------------------EXEMPLO------------------------------------------
+            > let n = 200
+            undefined
+            > n
+            200
+            > typeof n
+            'number'
+            > n = 'google'
+            'google'
+            > typeof n
+            'string'
+            > typeof 6
+            'number'
+            > typeof 6.5
+            'number'
+            > typeof '6.5'
+            'string'
+            > typeof []
+            'object'
+            > typeof {}
+            'object'
+            > typeof function(){}
+            'function'
+            > typeof undefined
+            'undefined'
+            > typeof infinity
+            'undefined'
+            > typeof NaN
+            'number'
+            > typeof Infinity
+            'number'
+            > typeof null
+            'object'
+            >
+
+
+    }
+
+
+    O nome de cada variável chama-se identificador.
+
+    Identificadores{
+
+        Podem começar com: 'Uma letra' , '$(cifrão)' ou ' _ (underline) '.
+
+        Não podem começar com  'Números'
+
+        Podem usar 'letras' e 'números'
+
+        Podem ser utilizados 'Acentos' e 'Símbolos'
+
+        "Não" podem conter 'espaços'
+
+        Não podem ser palavras reservadas
+
+        --------------------------------------DICAS------------------------------------------
+
+        Maiúsculas e Minúsculas fazem diferença. (JavaScript é uma linguagem Case Sensitive, diferencia maiúsculas de minúsculas.)
+
+        Tente escolher nomes coerentes para as variáveis.
+
+        Evite se tornar um 'programador alfabeto' ou 'programador contador'(todos os nomes de variáveis são letras ou números)
+
+    }
+}
+Tratamento de Dados{
+
+    Conversão de Dados{
+        STRING --> NUMBER
+
+            Number.parseInt(n)
+            Number.parseFloat(n)
+            Number(n)
+        
+        NUMBER --> STRING
+
+            String(n)
+            n.toString()
+    }
+
+    Formatação de Strings{
+
+        var s = "JavaScript"
+
+        'Eu estou aprendendo s' => NÃO FAZ INTERPOLAÇÃO
+        'Eu estou aprendendo' + s => USA DA CONCATENAÇÃO
+        `Eu estou aprendendo ${s}` => USA TEMPLATE STRING
+
+        ----------------------EXEMPLO--------------------------------
+
+        VARIÁVEIS
+
+            > nome = 'Juca'
+            'Juca'
+            > idade = 32
+            32
+            > nota = 9.4
+            9.4
+
+        CONCATENAÇÃO
+
+            > 'O aluno ' + nome + ' de ' + idade + ' anos, tirou ' + nota + ' na prova.'
+            'O aluno Juca de 32 anos, tirou 9.4 na prova.'
+        
+        TEMPLATE STRING  // (uso de crase pra definir um template)
+        
+            > `O aluno ${nome} de ${idade} anos, tirou a nota ${nota} na prova.`
+            'O aluno Juca de 32 anos, tirou a nota 9.4 na prova.'
+        
+    }
+
+    Formatação de Números{
+
+        DEFININDO NÚMERO DE CASAS DECIMAIS
+
+        --> x.toFixed(n) <--
+
+            --------EXEMPLO---------
+
+            > var n1 = 1547.9032
+            undefined
+            > n1
+            1547.9032
+            > n1.toFixed(2)
+            > n1
+            1547.9032
+            > n1.toFixed(2)
+            '1547.90'
+            > n1.toFixed(2).replace('.' , ',')
+            '1547,90'
+
+        DEFININDO NÚMEROS COMO MOEDAS
+        
+        --> x.toLocaleString('pt-BR("ou outro")', {style: 'currency', currency: 'BRL("ou  outro")'}) <--
+
+            --------EXEMPLO---------
+
+            > var sal = 1346.98
+            undefined
+            > sal
+            1346.98
+            > sal
+            1475.09348
+            > sal.toFixed(2)
+            '1475.09'
+            > sal.toFixed(2).replace('.' , ',')
+            '1475,09'
+            > sal.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})
+            'R$ 1.475,09'
+            > sal.toLocaleString('pt-BR',{style: 'currency', currency: 'USD'})
+            'US$ 1.475,09'
+            > sal.toLocaleString('pt-BR',{style: 'currency', currency: 'EUR'})
+            '€ 1.475,09'
+            
+    }
+}
+
+Operadores{
+
+    Aritméticos{
+        
+        5 + 2 = 7    (ADIÇÃO)
+        5 - 2 = 3    (SUBTRAÇÃO)
+        5 * 2 = 10   (MULTIPLICAÇÃO)
+        5 / 2 = 2.5  (DIVISÃO REAL)
+        5 % 2 = 1    (DIVISÃO INTEIRA / CÁLCULO DE RESTO)
+        5 ** 2 = 25  (POTENCIAÇÃO / EXPONENCIAÇÃO)
+
+        Precedências
+
+            1º =>    ()
+            2º =>    **
+            3º =>    * / %
+            4º =>    + -
+    }
+    Atribuição{
+        ' = ' significa recebe
+
+        var a = 5 + 3               == 8
+        var b = a % 5               == 3
+        var c = 5 * b ** 2          == 45
+        var d = 10 - a / 2          == 6
+        var e = 6 * 2 / d           == 2
+        var f = b % e + 4 / e       == 3
+
+        Auto-Atribuição  -  atribuir valor a uma variável baseado no valor de antes.
+
+            --------EXEMPLO---------
+
+            > var n = 3
+            undefined
+            > n=n+4
+            7
+            > n=n+4
+            11
+            > n=n+4
+            15
+            > n=n+4
+            > var n = 3
+            undefined
+            > n
+            3
+            > n = n + 4
+            7
+            > n = n - 5
+            2
+            > n = n * 4
+            8
+            > n = n / 2
+            4
+            > n = n ** 4
+            256
+            > n = 4
+            4
+            > n = n ** 2
+            16
+            > n = n % 5
+            1
+        
+        Incremento
+
+            ( x = x + 1 )  =>  ( x += 1 )  => ( x++ )
+            ( x = x - 1 )  =>  ( x -= 1 )  => ( x-- )
+
+        Simplificando
+            n = n + 4    ==>   n  += 4
+            n = n - 4    ==>   n  -= 4
+            n = n * 4    ==>   n  *= 4
+            n = n / 4    ==>   n  /= 4
+            n = n % 4    ==>   n  %= 4
+            n = n ** 4   ==>   n **= 4
+
+        
+    }
+
+    Relacionais{
+
+        Maior Q
+        5 > 2       true (VERDADEIRO)
+        
+        Menor Q
+        7 < 4       false (FALSO)
+        
+        Maior ou Igual 
+        8 >= 8      true (VERDADEIRO)
+        
+        Menor ou Igual
+        9 <= 7      false (FALSO)
+        
+        Igual
+        5 == 5      true (VERDADEIRO)
+        
+        Diferente
+        4 != 4      false (FALSO)
+
+        IDENTIDADE
+            
+            5 ==  5   ==> true (VERDADEIRO)  //mesma grandeza e mesmo tipo
+            5 == '5'  ==> true (VERDADEIRO)  //mesma grandeza e tipos diferentes
+            O JavaScript testa apenas a grandeza dos caracteres
+
+            5 === '5' ==> false (FALSO)
+            5 ===  5  ==> true (VERDADEIRO)
+
+    }
+
+    Lógicos{
+
+        !  NEGAÇÃO
+            
+            !true  --->  false
+            !false --->  true
+
+        && CONJUNÇÃO
+
+            true&&true   ---> true
+            true&&false  ---> false
+            false&&true  ---> false
+            false&&false ---> false
+
+        || DISJUNÇÃO
+
+            true||true    ---> true
+            true||false   ---> true
+            false||true   ---> true
+            false||false  ---> false
+
+        ?: TERNÁRIO
+
+            |teste| ? |true| : |false|
+            |média >= 7| ? |"Aprovado"| : |"Reprovado"|  //similar a if(se) e else(senão) 
+
+        Precedência
+
+    }
+    Ternários{
+
+    }
+}
