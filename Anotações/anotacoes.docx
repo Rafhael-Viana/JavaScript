@@ -327,12 +327,67 @@ Operadores{
         ?: TERNÁRIO
 
             |teste| ? |true| : |false|
-            |média >= 7| ? |"Aprovado"| : |"Reprovado"|  //similar a if(se) e else(senão) 
+            |média >= 7| ? |"Aprovado"| : |"Reprovado"|  //similar a if(se) e 		   else(senão) 
 
         Precedência
+		
+		
 
     }
     Ternários{
 
     }
+}
+
+D.O.M{
+
+    DOM  é a sigla utilizada para Document Object Model
+    Ñ funciona com o node.js
+
+    Árvore DOM{
+        raiz.objeto.
+
+        window {
+
+            location  -  localização do seu site
+            document {
+                html {
+                    head {
+                        meta
+                        title
+                    }
+                        
+                    body {
+                        h1
+                        p
+                        section {
+                            p {
+                                strong
+                            }
+                            p
+                        }
+                    }
+                }
+            }
+            history   -  histórico
+        }
+    }
+
+    Selecionando Objetos{
+        Por Marca/Tag{
+            getElementsByTagName()
+        }
+        Por ID{
+            getElementByID()
+        }
+        Por Nome{
+            getElementsByName()
+        }
+        Por Classe{
+            getElementsByClassName()
+        }
+        Por Seletor{
+
+        }
+    }   
 }
