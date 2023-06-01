@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        div{
+            background-color: rgb(123, 17, 209);
+            color: black;
+            font-size: 1.5em;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 200px;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+        }
+        /* div:hover{
+            background-color: rgb(77, 16, 128);
+            color: white;
+            transition: 0.3s;
+        } */
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja!
+    </div>
+    <script>
+        var a = document.getElementById("area")
+        a.addEventListener("click",clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        
+        function clicar() {
+            a.style.backgroundColor = "rgb(255, 255, 255)"
+            a.innerHTML = 'Hello, world!'
+            a.style = 'background-color: black; color: white;'
+        }
+        function entrar() {
+            a.innerText = 'Oi!'
+            a.style = 'background-color: aqua; color: black;'
+        }
+        function sair() {
+            a.innerText = 'Interaja!'
+            a.style = "background-color:rgb(123, 17, 209); color: black;"
+        }
+    </script>
+</body>
+</html>
