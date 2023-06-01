@@ -387,7 +387,29 @@ D.O.M{
             getElementsByClassName()
         }
         Por Seletor{
-
+            querySelector()
         }
+    }
+    Eventos D.O.M {
+        Event Reference MDN                   // pesquisar
+
+        Eventos de Mouse
+            mouseenter
+            mousemove
+            mousedown
+            mouseup
+            click
+            mouseout
     }   
+
+    Funções{
+
+        Conjunto de códigos/linhas que são executadas somente se um evento acontecer.
+        Bloco - conjunto de linhas de código
+
+        ---------------------SINTAXE-----------------------
+            function ação(parâmetros){
+                Bloco
+            }
+    }
 }
