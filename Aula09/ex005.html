@@ -36,16 +36,23 @@
 </head>
 <body>
     <h1>Aprendendo DOM</h1>
-    <p>Aqui vai o resultado.</p>
+    <p id="p1">Aqui vai o resultado.</p>
     <section>
         <p id="p2">Aprendendo a usar <strong> DOM </strong> em JavaScript.</p>
-        <p>Clique em mim!</p>
+        <p class="par">Clique em mim!</p>
     </section>
     <script>
         var p1 = window.document.getElementsByTagName('p')[0]
         window.document.write(p1.innerText)
         var h1 = window.document.getElementsByTagName('h1')[0]
         h1.style.backgroundColor = 'red'
+        var p2 = window.document.getElementById('p2')
+        p2.style.border = '1px solid rgb(21, 49, 158)'
+        var p3 = window.document.getElementsByClassName('par')[0]
+        p3.innerText = 'JABULANI'
+        p3.style.backgroundColor = 'green'
+        var p = document.querySelector('p#p1')
+        p.style.color = 'red'
     </script>
 </body>
 </html>
