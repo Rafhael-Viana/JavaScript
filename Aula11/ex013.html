@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições JavaScript</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: bisque;
+        }
+        h1{
+            color: rgb(104, 49, 49);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 3em;
+        }
+        h2{
+            color: rgb(104, 49, 49);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        input{
+            padding: 7px;
+        }
+        div{
+            margin-top: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imigração Virtual</h1>
+    <h2>Digite o seu país de origem.</h2>
+    <form  id="form" autocomplete="on">
+        <input type="text" name="pais" id="paises">
+        <input type="button" value="Enviar" id="button" onclick="verify()">
+        <div id="show">Resultado</div>
+    </form>
+    <script>
+
+        function verify() {
+            var p = document.querySelector('input#paises')
+            var s = document.querySelector('div#show')
+            var r = String(p.value)
+            s.innerHTML = `Seu país de origem é ${r}.`
+
+            if(r != 'Brasil'){
+                s.innerHTML += `<p>Você é estrangeiro!</p>`
+                s.innerHTML += '<p><strong>Volte pro seu país!</strong></p>'
+            }else{
+                s.innerHTML += '<p>Você é brasileiro!</p>'
+                s.innerHTML += '<p><strong>Volte pro país de onde você veio!</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições JavaScript</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: bisque;
+        }
+        h1{
+            color: rgb(104, 49, 49);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 3em;
+        }
+        h2{
+            color: rgb(104, 49, 49);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        input{
+            padding: 7px;
+        }
+        div{
+            margin-top: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multômetro</h1>
+    <h2>Digite aqui a velocidade do seu carro.</h2>
+    <form>
+        <input type="number" name="vel" id="veli" required placeholder="Ex:40Km/h">
+        <input type="button" value="Enviar" id="button">
+        <div id="show">Resultado</div>
+    </form>
+    <script>
+        var but = document.querySelector("input#button")
+            but.addEventListener("click", calculo)
+
+        function calculo(){
+
+            var vel = document.querySelector('input#veli')
+            var show = document.querySelector('div#show')
+            var res = Number(vel.value)
+            show.innerHTML = `<p>A velocidade do seu carro é ${res} Km/h.</p>`
+            show.innerHTML += '<p><strong>Dirija com cuidado!</strong></p>'
+            if(res > 60){
+                show.innerHTML = "<p>Você ultrapassou a velocidade da via!</p>"
+                show.innerHTML += '<p><strong>MULTADO!!!</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
