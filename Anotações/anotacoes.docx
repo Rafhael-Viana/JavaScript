@@ -413,3 +413,63 @@ D.O.M{
             }
     }
 }
+
+Condições{
+
+    Desvio condicional
+        Método para acionar diferentes tipos de ação a depender da situação.
+        Impõe condições para que determinado comando seja executado.
+    
+    Estrutura
+
+        if(condição == true){
+            ----Ação-----
+        }
+        else(condição == false){
+            ----Outra Ação-----
+        }
+    
+    Tipos de Condição{
+
+        Condição Simples
+            (condição == true, executa ação)    // se n tiver else, nada acontece
+                          
+        Condição Composta
+            if(condição == true, executa ação)
+            else(condição == false, executa outra ação)
+                    
+        Condição Aninhada
+            if(condição == true){
+                ----Ação-----
+            }else{
+                if(condição 2 == true){
+                    ------Ação-2--------
+                }else{
+                    ------Ação-3--------
+                            OU
+                    if(.....){
+                        ................
+                    }else{
+                        ................
+                    }
+                }
+            }
+        
+        Condição Múltipla{
+            Serve para trabalhar valores fixos
+
+            Estrutura
+                switch(expressão){
+                case 1:
+                    -----Código--------
+                break
+                case 2:
+                    -----Código--------
+                break
+                default:
+                    -----Código--------
+                break
+            }  //   O COMANDO => "BREAK" <= É OBRIGATÓRIO!!!!
+        }
+    }   
+}
