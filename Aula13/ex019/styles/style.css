@@ -35,17 +35,13 @@ label{
 }
 #button{
     display: block;
+    margin-bottom: 5px;
 }
 div{
     margin-top: 15px;
     margin-bottom: 15px;
-}
-img{
-    width: 400px;
-    height: 400px;
-    margin-top: 10px;
-    position: relative;
-    border-radius: 50%;
+    margin: auto;
+    padding: 3px;
 }
 footer{
     text-align: center;
