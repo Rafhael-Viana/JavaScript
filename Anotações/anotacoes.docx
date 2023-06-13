@@ -473,3 +473,33 @@ Condições{
         }
     }   
 }
+Repetições {
+    while    --->  estrutura de repetição com teste lógico no início
+
+        Testa a condição e executa o bloco.
+        
+        ----------------------------
+        while(condição){
+            BLOCO
+        }
+        ----------------------------
+
+    do while  -->  estrutura de repetição com teste lógico no final
+
+        Executa o bloco e testa a condição.
+
+        -----------------------------
+        do{
+            BLOCO
+        }while() 
+        -----------------------------
+
+    for  ----->  estrutura de repetição com variável de controle
+
+        Inicializa, faz o teste lógico e realiza um incremento
+
+        ----------------------------
+        for(inicio;teste;incremento){
+            BLOCO           
+        }
+}
