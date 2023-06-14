@@ -11,7 +11,6 @@ function gerar() {
         let p = 1
         n = Number(n.value)
         tb.innerHTML = ''
-        // res.innerHTML = 'Tabuada:'
         for(let c = n ; c <= (n*10); c += n){
             let item = document.createElement('option')
             item.text = `${n} x ${p} =  ${c}`
