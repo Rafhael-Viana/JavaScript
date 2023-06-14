@@ -503,3 +503,70 @@ Repetições {
             BLOCO           
         }
 }
+Arrays{
+    Variáveis Simples - Armazenam apenas 1 valor por vez
+    Variáveis Compostas - conseguem armazenar vários valores em uma mesma estrutura
+
+    Arrays - vetor
+        Variável composta que recebe vários elementos.
+            Elemento - objeto que ocupa parte do array, o valor atribuído a ele e um índice.
+                Índice - marcação para organizar o elementos dentro de um array, e a destinação de seus conteúdos.
+                    Conteúdo - valor de cada elemento.
+    
+    Array = variável composta, que agrupa vários elementos, onde cada elemento tem um valor e uma chave de identificação.
+
+    ESTRUTURA
+        --------------------------------
+        let num = []
+        --------------------------------
+
+    ADICIONANDO ELEMENTOS E ATRIBUTOS
+        --------------------------------
+        num[3] = 6
+        --------------------------------
+        Define o elemento número 3 com o valor 6.
+
+        --------------------------------
+        num.push(7)
+        --------------------------------
+        Define o valor 7 a um elemento criado na última posição.
+
+        --------------------------------
+        num.length
+        --------------------------------
+        Lê o comprimento(número de elementos) do seu vetor
+
+        --------------------------------
+        num.sort()
+        --------------------------------
+        Organiza os elementos em ordem crescente de acordo com seus valores
+
+        --------------------------------
+        num.indexOf(7)
+        --------------------------------
+        Busca um valor dentro de um vetor(no caso o valor 7), retornando a posição onde o valor se encontra. 
+    
+}
+Funções{
+
+    Funções(tarefas ou rotinas) - são ações executadas assim que são chamadas em decorrência de um evento.
+
+        ESTRUTURA
+            Chamada
+            Parâmetro(1/+)
+            Ação
+            Retorno    
+
+            // obs: Nem toda função tem parâmetros e nem toda função tem retorno.
+            // obs: Funções em JavaScript só podem ter 1 retorno.
+
+            -------------------------------------
+            function ação(parâmetros){
+                BLOCO
+                return res
+            }
+            ação(5)
+            --------------------------------------
+
+            //obs: Funções tem propriedade recursiva(quando uma função chama ela mesma)    
+}
