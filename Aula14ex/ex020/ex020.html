@@ -3,20 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Contador</title>
 </head>
 <body>
     <header>
-        <h1>Hora do Dia</h1>
+        <h1>Vamos Contar</h1>
     </header>
     <main>
-        <div id="hora">Resultado</div>
-        <div id="image">
-            <img id="foto" src="depositphotos_66946055-stock-photo-cup-of-coffee.jpg" alt="Foto do Dia">
-        </div>
+        <form>
+            <p>
+                <label for="inic">Início:</label>
+                <input type="number" name="inic" id="inic">
+            </p>
+            <p>
+                <label for="fim">Final:</label>
+                <input type="number" name="fim" id="fim">
+            </p>
+            <p>
+                <label for="passo">Passo:</label>
+                <input type="number" name="passo" id="passo">
+            </p>
+            <input type="button" value="Contar" class="button">
+            <input type="reset" value="Limpar" class="buttonr">
+        </form>
+        <div id="res">Preparando a contagem...</div>
     </main>
     <footer>
         <p>@cursoemvideo</p>
     </footer>
+    <script src="script.js"></script>
+
 </body>
 </html>
