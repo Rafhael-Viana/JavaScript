@@ -568,5 +568,18 @@ Funções{
             ação(5)
             --------------------------------------
 
-            //obs: Funções tem propriedade recursiva(quando uma função chama ela mesma)    
+            //obs: Funções tem propriedade recursiva(quando uma função chama ela mesma)     
+}
+
+Objetos{
+    Variável composta com possibilidade de índice literal(é possível nomear os índices, diferentemente de arrays(sempre são 0,1,2...))
+
+    ESTRUTURA
+     let variável = {índice: 'Valor'(string, number,  etc...), índice: 'valor', índice: 'valor', ...}
+     
+    ------------------------------------------------------------------------------------------------
+        let amigo = {nome: 'José', sexo: 'M', peso: 85.4, engordar(p){}}
+    ------------------------------------------------------------------------------------------------
+
+    Objetos além de poder guardar vários valores, também podem armazenar funcionalidades(métodos).
 }
