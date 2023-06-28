@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <style>
+        body{
+            background-color: bisque;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+        }
+        h1{
+            text-align: center;
+            font-size: 2em;
+        }
+        form{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            border-radius: 15px 15px 0px 0px;
+            padding: 20px;
+        }
+        div.show{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            border-radius: 0px 0px 15px 15px;
+            padding: 20px;
+        }
+        div p{
+            margin: 0px;
+        }
+    </style>
+</head>
+<body onload="focar()">
+    <main>
+        <h1>Uso de Strings</h1>
+        <form>
+            <p>
+                <label for="nome">Insira seu Nome:</label>
+            </p>
+            <input type="text" name="nome" id="nome" size="40">
+            <p>
+                <label for="nome">Frase de Efeito:</label>
+            </p>
+            <input type="text" name="frase" id="frase" size="40" maxlength="200">
+            <p><input type="button" value="Enviar" onclick="analisar()"></p>
+        </form>
+        <div class="show">
+            <p>Resultado...</p>
+        </div>
+    </main>
+    <script>
+        function focar() {
+            let nome = document.getElementById("nome");
+            nome.focus()
+        }
+        function analisar(){
+            let nome = document.querySelector('#nome')
+            let res = document.querySelector('.show')
+            let frase = document.querySelector('#frase').value
+
+            if(frase.length == 0 || nome.value.length == 0){
+                window.alert('Error')
+            }else{
+
+                res.innerHTML = `Seu nome tem ${nome.value.length} letras.` // função length lê a quantidade de caracteres digitados numa string.
+                res.innerHTML += `<p>O terceiro caractere da sua frase é ${frase[2]}.</p>` // '[' e ']' definem qual índice do objeto (no caso a string digitada) vc quer acessar. 
+                res.innerHTML += `<p>${frase.slice(2,10)}</p>` // requer 2 parâmetros(inicio e fim) para retirar essa parte de uma determinada string.
+                res.innerHTML += frase.replace('vingança','cachaça') // substitui na frase os caracteres que você definir('palavra', 'substituta')
+                res.innerHTML += `<p>${nome.value.trim()}</p>` // remove espaços sobrando no seu dado ou variável.
+                let split = frase.split(" ")
+                res.innerHTML += `<p>${split}</p>` // divide as strings e transforma em um array.
+                res.innerHTML += split[2]
+                res.innerHTML += `${frase.split(",")}`
+            }
+
+        }
+    </script>
+</body>
+</html>
