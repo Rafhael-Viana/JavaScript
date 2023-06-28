@@ -1,3 +1,14 @@
+JAVASCRIPT
+
+.   É uma linguagem de programação de alto nível
+
+.   Auxilia na criação de páginas, junto de HTML e CSS
+
+.   Possui tipagem dinâmica fraca(é possível mudar o tipo de uma variável ao longo do programa)
+
+.   É considerada multiparadigma[Orientada a Objetos,imperativo,funcional]
+
+
 1 '=' significa "Recebe" (sinal de atribuição)
 
 2 '==' significa "Igual" (sinal de comparação)
@@ -74,7 +85,21 @@ Variáveis{
 
 
     }
+    Escopos{
 
+        Escopo é a propriedade que determina onde uma variável pode ser utilizada como um identificador em um programa. 
+        Uma variável declarada em uma função é normalmente local; o contexto define o escopo.
+        
+        No JavaScript podemos ter vários escopos.
+
+            Global - iniciado com a aplicação.
+            Local - podem existir em várias intruções como as funções
+            
+        Utilizando 'let' e 'const' podemos criar escopo até em instruções como if deixando o código mais confiável e separando em blocos cada instrução.
+        
+        Utilizando 'const' podemos garantir que a variável permaneça a mesma durante todo o código sem a possibilidade de alteração.
+        
+    }
 
     O nome de cada variável chama-se identificador.
 
@@ -102,6 +127,7 @@ Variáveis{
 
     }
 }
+
 Tratamento de Dados{
 
     Conversão de Dados{
@@ -471,6 +497,10 @@ Condições{
                 break
             }  //   O COMANDO => "BREAK" <= É OBRIGATÓRIO!!!!
         }
+        
+        'BREAK'    ----> Utilizado para parar uma intrução.
+        'CONTINUE' ----> Utilizado para pular uma intrução
+        
     }   
 }
 Repetições {
