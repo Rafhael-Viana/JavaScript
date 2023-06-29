@@ -612,4 +612,7 @@ Objetos{
     ------------------------------------------------------------------------------------------------
 
     Objetos além de poder guardar vários valores, também podem armazenar funcionalidades(métodos).
+
+    Tudo em JavaScript é um objeto(todas as funcionalidades possuem métodos que podem ser utilizados).
+    
 }
