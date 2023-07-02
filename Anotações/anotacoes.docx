@@ -616,3 +616,10 @@ Objetos{
     Tudo em JavaScript é um objeto(todas as funcionalidades possuem métodos que podem ser utilizados).
     
 }
+Instrução THIS{
+    
+    A instrução THIS sem nenhum escopo definido(sem estar em nenhuma função) sempre vai se referir ao objeto window.
+
+    Dentro de um escopo(contexto/função) o this vai se referir a instância e pode acessar suas propriedades e alterá-las.
+
+}
