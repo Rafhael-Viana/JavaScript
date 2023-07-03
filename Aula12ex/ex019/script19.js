@@ -8,7 +8,7 @@ function verify() {
     var n = document.querySelector('input#nascimento')
     var idade = ano - Number(n.value)
 
-    if(n.value <= 0 || idade > 140 || n.value.lenght == 0){
+    if(n.value <= 0 || idade > 140 || n.value.length == 0){
         window.alert('[ERRO] Verifique os dados e tente novamente.')
     }else{
         var genero = ''
