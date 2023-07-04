@@ -353,14 +353,55 @@ Operadores{
         ?: TERNÁRIO
 
             |teste| ? |true| : |false|
-            |média >= 7| ? |"Aprovado"| : |"Reprovado"|  //similar a if(se) e 		   else(senão) 
+            |média >= 7| ? |"Aprovado"| : |"Reprovado"|  //similar a if(se) e else(senão) 
 
-        Precedência
 		
-		
+        Ternários{
 
-    }
-    Ternários{
+            Estrutura utilizada para reduzir as linhas de código trabalhando com três parâmetros.
+
+            Ex sem ternário:
+            
+                const anoNascimento = 1980
+                let Millenial
+
+                if(anoNascimento >= 1981 && anoNascimento <= 1986){
+                    Millenial = true
+                }else{
+                    Millenial = false
+                }
+
+            Ex com ternário:
+            
+                const anoNascimento = 1980
+                const Millenial = (anoNascimento >= 1981 && anoNascimento <= 1986) ? true : false
+
+            Ex com ternário e variáveis:
+            
+                const vendas = 10000
+                const meta = 8000
+                (vendas > meta) ? comissao = vendas * 0.1 : vendas * 0
+
+                //Equivalente:
+
+                const vendas = 10000
+                const meta = 8000
+                if(vendas > meta){
+                    comissao = vendas * 0.1
+                } else {
+                    comissao = vendas * 0
+                }
+
+            Ex com ternário estilo elseif's:
+                
+                let inscritos = 2000000
+
+                const premioYoutube = inscritos >= 50000000 ? 'Premio Rubi'
+                                    : inscritos >= 10000000 ? 'Premio Diamante'
+                                    : inscritos >=  1000000 ? 'Premio Ouro'
+                                    : inscritos >=   100000 ? 'Premio Prata'
+                                    : ''
+        }
 
     }
 }
@@ -414,6 +455,77 @@ D.O.M{
         }
         Por Seletor{
             querySelector()
+        }
+
+        Alterando Elementos{
+            Você pode alterar o conteúdo de um elemento através da propriedade "innerHTML" e da propriedade "textContent"
+
+            ESTRUTURA
+            -------------------------------------
+            let x = document.querySelector('div')
+            x.innerHTML = "Olá, tudo bem?"
+            -------------------------------------
+        }
+
+        Criando Elementos{
+            
+            Para criar elementos em JavaScript utilizamos o método 'createElement()'.
+
+            ESTRUTURA
+            -------------------------------------
+            let x = document.createElement('p')
+            -------------------------------------
+            
+        }
+
+        Removendo Elementos{
+
+            Para remover elementos em JavaScript utilizamos os métodos 'remove()' e 'removeChild()'.
+
+            ESTRUTURA
+            -----------------------------------------
+                let x = document.querySelector('div')
+                x.remove()
+                -------------------------------------
+                let x = document.querySelector('div')
+                let y = x.parentNode()
+                y.removeChild(x)
+            -----------------------------------------
+
+        }
+
+        Inserindo Elementos{
+
+            Para inserir elementos em JavaScript utilizamos o método 'appendChild()' e 'insertBefore'.
+
+            Método 'appendChild()'
+
+            ESTRUTURA
+            ---------------------------------------
+            let el = document.createElement('div')
+            el.classList = "div-criada"
+            let container = document.querySelector('#container')
+            container.appendChild(el)
+            ---------------------------------------
+
+            Método 'insertBefore'   // insere elementos antes de outro
+            
+
+            ESTRUTURA
+            ---------------------------------------
+            let el2 = document.createElement('div')
+            el2.classList = "div-before"
+            let el3 = document.querySelector('#container .div-criada')
+            container.appendChild(el2, el3)
+        }
+
+        Trocando Elementos{
+
+            Utilizamos o método "replaceChild()" para substituir elementos no DOM
+
+            ESTRUTURA
+            ----------------------------------------
+            
         }
     }
     Eventos D.O.M {
