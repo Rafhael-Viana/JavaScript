@@ -1,6 +1,11 @@
 var button = document.querySelector('input#button')
 button.addEventListener('click', verify)
 
+function focar(){
+    let foco = document.querySelector('#nascimento')
+    foco.focus()
+}
+
 function verify() {
     var date = new Date()
     var ano = Number(date.getFullYear())
