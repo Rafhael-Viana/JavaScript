@@ -488,7 +488,7 @@ D.O.M{
                 x.remove()
                 -------------------------------------
                 let x = document.querySelector('div')
-                let y = x.parentNode()
+                let y = x.parentNode
                 y.removeChild(x)
             -----------------------------------------
 
@@ -525,8 +525,20 @@ D.O.M{
 
             ESTRUTURA
             ----------------------------------------
+            let el = document.createElement('div')
+            let el2 = el.parentNode
+            let el3 = document.createElement('span')
+
+            el2.replaceChild( el3(o que vai entrar), el(o que vai sair) )
             
         }
+
+        Adicionando Atributos{
+
+            É possível adicionar atributos via JS através do método "setAttribute()"
+            
+        }
+
     }
     Eventos D.O.M {
         Event Reference MDN                   // pesquisar
