@@ -536,7 +536,7 @@ D.O.M{
         Adicionando Atributos{
 
             É possível adicionar atributos via JS através do método "setAttribute()"
-            
+
         }
 
     }
@@ -550,6 +550,7 @@ D.O.M{
             mouseup
             click
             mouseout
+            
     }   
 
     Funções{
