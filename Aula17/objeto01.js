@@ -8,5 +8,4 @@ let amigo = {nome: 'Jose',
     }
 }
 amigo.engordar(2)
-amigo.lenght
 console.log(`${amigo.nome} pesa ${amigo.peso}Kg`)
