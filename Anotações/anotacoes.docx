@@ -537,6 +537,26 @@ D.O.M{
 
             É possível adicionar atributos via JS através do método "setAttribute()"
 
+            ESTRUTURA
+            -------------------------------------------------
+            let el = document.querySelector('div')
+            el.setAttribute('id', 'container')
+            -------------------------------------------------
+
+        }
+
+        Adicionando CSS pelo DOM{
+            
+            E possível também adicionar elementos CSS via DOM
+
+            ESTRUTURA
+            -------------------------------------------------
+            let title = document.querySelector('h1')
+            title.style.textAlign = 'center'
+            title.style.backgroundColor = 'red'
+            title.style.cssText = 'backgroundColor: red; display: inline-block; height: 150px; width: 150px;'
+            -------------------------------------------------
+
         }
 
     }
@@ -550,7 +570,7 @@ D.O.M{
             mouseup
             click
             mouseout
-            
+
     }   
 
     Funções{
@@ -747,4 +767,20 @@ Instrução THIS{
 
     Dentro de um escopo(contexto/função) o this vai se referir a instância e pode acessar suas propriedades e alterá-las.
 
+}
+
+Propriedades Document{
+
+    Através das propriedades do document podemos acessar elementos gerais do documento sem ter que selecionar algum em específico.
+
+    ESTRUTURA
+    ----------------------------------------------------------------
+    document.title = "Novo título"
+    console.log(document.body)
+    console.log(document.head)
+    ----------------------------------------------------------------
+
+}
+Callback Functions{
+    
 }
