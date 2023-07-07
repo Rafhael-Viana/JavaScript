@@ -782,5 +782,45 @@ Propriedades Document{
 
 }
 Callback Functions{
-    
+    São funções passadas em forma de argumentos para outras e executadas durante o código.
+    São a base para entender funções assíncronas.
+
+    ESTRUTURA
+    ------------------------------------------------------------------------------------------------
+    function exibir(num){
+        console.log(num)
+    }
+    function soma(a,b,callback){
+        var op = a + b
+        callback(op)
+    }
+    function multiplicar(a,b,callback){
+        var op = a * b
+        callback(op)
+    }
+    soma(2,2,exibir)
+    multiplicar(2,4,exibir)
+}
+
+setTimeout e setInterval{
+
+    Podemos com estas funções criar ações no software que executam depois de um tempo ou de tempos em tempos.
+
+    Um dos argumentos destas funções é uma callback function.
+
+    ESTRUTURA
+    ------------------------------------------------------------------------------------------------
+    setTimeout(() => {
+        console.log('Testando o setTimeout')
+    }, 100)
+
+    console.log("Isso vem primeiro mesmo vindo depois")
+    ------------------------------------------------------------------------------------------------
+
+    ESTRUTURA 2
+    ------------------------------------------------------------------------------------------------
+    setInterval(() => {
+    console.log('Testando o setInterval')
+    }, 2000) // obs: Funciona infinitamente. Cuidado!!!
+    ------------------------------------------------------------------------------------------------
 }
