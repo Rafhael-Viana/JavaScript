@@ -561,15 +561,32 @@ D.O.M{
 
     }
     Eventos D.O.M {
-        Event Reference MDN                   // pesquisar
+        
+        -----------------------------> ==><||(EVENT REFERENCE MDN)||> <== <----------------------------// PESQUISAR //--------------------------------
 
-        Eventos de Mouse
-            mouseenter
-            mousemove
-            mousedown
-            mouseup
-            click
-            mouseout
+        --> <!-- O que são eventos DOM? --> <--
+
+            Por meio de JavaScript podemos mapear algumas ações dos usuários, que chamamos de eventos.
+
+            Como: movimento do mouse, click, mouse entrando ou saindo de um elemento, carregamento da página e etc.
+
+            E então criar comportamento interessante como: animação de menu abrindo e fechando.
+
+            Eventos de Carregamento
+
+            Eventos de Mouse
+                mouseenter
+                mouseout
+                mousemove
+                mousedown
+                mouseup
+                click
+                dbclick
+
+            Keyboard Events
+                keypress
+                keydown
+                keyup
 
     }   
 
@@ -823,4 +840,12 @@ setTimeout e setInterval{
     console.log('Testando o setInterval')
     }, 2000) // obs: Funciona infinitamente. Cuidado!!!
     ------------------------------------------------------------------------------------------------
+}
+
+clearTimeout e clearInterval{
+
+    Podemos dar um fim em setTimeout e setInterval através destes dois métodos.
+
+    Então, após determinada condição, os timers não serão mais executados.
+    
 }
