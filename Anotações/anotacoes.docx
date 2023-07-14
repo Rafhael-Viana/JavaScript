@@ -849,3 +849,6 @@ clearTimeout e clearInterval{
     Então, após determinada condição, os timers não serão mais executados.
     
 }
+
+
+
