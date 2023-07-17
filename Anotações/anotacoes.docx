@@ -403,6 +403,19 @@ Operadores{
                                     : ''
         }
 
+        Spread(...){
+
+            Percorre todo o seu elemento e trata os seus valores.
+
+            ex:
+                const primeiro = [1,2,3]
+                const segundo = [4,5,6]
+
+                const combinado = [...primeiro,...segundo]
+
+            O operador spread acima, na frente de cada um dos arrays, vai percorrer cada elemento de primeiro e segundo e guardar seus valores em combinado.
+        }
+
     }
 }
 
@@ -598,7 +611,28 @@ D.O.M{
         ---------------------SINTAXE-----------------------
             function ação(parâmetros){
                 Bloco
+                return 
             }
+        
+        Funções Anônimas{
+            
+            Funções declaradas e usadas dinamicamente, sem precisar atribuir um nome a elas.
+
+            ESTRUTURA
+            ----------------------------------------------------------------
+            function(){
+                bloco
+                return
+            }
+            ----------------------------------------------------------------
+
+        }
+
+        Arrow Funtions{
+
+
+
+        }
     }
 }
 
@@ -694,6 +728,12 @@ Repetições {
         for(inicio;teste;incremento){
             BLOCO           
         }
+
+        for in
+            Utilizado para percorrer objetos ou arrays utilizando o índice como base.
+
+        for of
+            Utilizado para percorrer objetos ou arrays, mas já mostrando o valor de cada elemento.
 }
 Arrays{
     Variáveis Simples - Armazenam apenas 1 valor por vez
@@ -761,6 +801,10 @@ Funções{
             --------------------------------------
 
             //obs: Funções tem propriedade recursiva(quando uma função chama ela mesma)     
+
+    Funções de Construtor{
+        
+    }
 }
 
 Objetos{
@@ -849,6 +893,7 @@ clearTimeout e clearInterval{
     Então, após determinada condição, os timers não serão mais executados.
     
 }
+
 
 
 
