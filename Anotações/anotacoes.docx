@@ -417,6 +417,21 @@ Operadores{
         }
 
     }
+    Operadores Bitwise{
+        Operador que trabalham com valores em binário. (Mesmo conceito de Portas Lógicas(or, and, not, nand...))
+
+        Operador "&"(and)
+            Quando houver equivalência de bits 1 retorna 1... senão retorna 0...
+        
+        Operador "|"(or)
+            Retorna bits 1 se o um dos valores for 1...
+
+        Operador "^"(xor)
+            Retorna 1 se os valores forem diferentes...iguais retorna 0...
+        
+        Operadores "<<" e ">>"(Deslocamento de bits)
+            Desloca a quantidade definida de bits para a esquerda("<<") ou para a direita(">>").
+    }
 }
 
 D.O.M{
@@ -630,8 +645,63 @@ D.O.M{
 
         Arrow Funtions{
 
+            Deriva do conceito de lambda functions e do paradigma funcional, e que tentam escrever de maneira concisa uma função.
 
+            ESTRUTURA
+            -----------------------------------------------------------------
+            let x = () => {BLOCO}
+                OU
+            let x = a => BLOCO
+            
+            Tratam a propriedade "this" de maneira diferente de uma função normal.
 
+        }
+
+        Funções Construtoras{
+
+            Funções que utilizam o operador new.
+            São muito utilizadas com classes.
+            Retornam um objeto.
+            Tratam "this" de maneira diferente, onde no contexto this refere-se ao objeto criado e não ao objeto global.
+
+        }
+        Funções Aninhadas{
+
+            Funções aninhadas são funções escritas dentro de outras funções.
+
+            ESTRUTURA
+            -------------x--------------------x------------------x---------------
+
+            const funcao = (...valores) => {
+                const soma = (val) => {
+                    let res = 0
+                    for(v of val){
+                        res += v
+                    }
+                    return res
+                }
+                return soma(valores)
+            }
+            console.log(funcao(10,15,20))
+            
+            -------------xx----------------x<->x------------------xx--------------
+
+        }
+
+        Funções Geradoras{
+
+            Funções Geradoras são funções que tem seu retorno adiado até quando nós precisarmos.
+            Podem ser retornados vários processos ao longo do programa.
+            Retornam Iteradores que permitem percorrer a função de maneira controlada.
+            São a base da função assíncrona em JavaScript.
+
+            ESTRUTURA
+            -------------x--------------------x------------------x---------------
+
+            function* cores(){
+                
+            }
+            
         }
     }
 }
@@ -804,6 +874,7 @@ Funções{
 
     Funções de Construtor{
         
+        Funções utilizadas geralmente no uso de classes que definem um padrão de construção de elementos.
     }
 }
 
