@@ -9,24 +9,29 @@
 
 
 
-// <!---------------------------REVISAR EXEMPLO---------------------------->
-class Person{
-    constructor(name){
-        this.name = name
-    }
-    printNome() {
-        setTimeout(function(){
-            console.log(this.name);
-        })
-    }
+// // <!---------------------------REVISAR EXEMPLO---------------------------->
+// class Person{
+//     constructor(name){
+//         this.name = name
+//     }
+//     printNome() {
+//         setTimeout(function(){
+//             console.log(this.name);
+//         })
+//     }
     
-    printArrowNome(){
-        setTimeout(() => console.log(this.name),200)
-    } 
-}
+//     printArrowNome(){
+//         setTimeout(() => console.log(this.name),200)
+//     } 
+// }
 
 
-const creature = new Person("Hantaro");
+// const creature = new Person("Hantaro");
 
-creature.printNome()
-creature.printArrowNome()
+// creature.printNome()
+// creature.printArrowNome()
+
+
+const press = document.addEventListener("keydown", (key) => {
+    console.log(key.key)
+})
