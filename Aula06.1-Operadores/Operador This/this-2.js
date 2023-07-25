@@ -14,6 +14,8 @@
 
 //O método setTimeout e setInterval criam novos escopos que funções anônimas normais não são capazes de contornar, enquanto que arrow functions são capazes de procurar em escopos acima até que o "this" seja encontrado, pois não usam o contexto léxico e sim o contexto root(pai, raiz).
 
+//obs: procurar mesmo ex em estrutura de classes em testes.js no repositório.
+
 function aluno(nome,nota){
     this.nome = nome
     this.nota = nota
