@@ -618,10 +618,12 @@ D.O.M{
 
     }   
 
-    Funções{
+    Funções e Métodos{
 
-        Conjunto de códigos/linhas que são executadas somente se um evento acontecer.
-        Bloco - conjunto de linhas de código
+        Conjunto de códigos/linhas que são executadas quando chamadas.
+        Bloco - conjunto de linhas de código.
+
+        Métodos - funções relacionadas a objetos.
 
         ---------------------SINTAXE-----------------------
             function ação(parâmetros){
@@ -699,9 +701,70 @@ D.O.M{
             -------------x--------------------x------------------x---------------
 
             function* cores(){
-                
+                const a = yield "Vermelho"
+                const b = yield "Verde"
+                const c = yield "Azul"
+                const d = yield "Amarelo"
             }
+
+            itc(iterador) = cores()
+            console.log(itc.next().value)
+            console.log(itc.next().value)
+            console.log(itc.next().value)
+            console.log(itc.next().value)
             
+            -------------xx----------------x<->x------------------xx--------------
+        }
+
+        Método Map() {
+            Método de iteração de arrays que percorre todo o seu corpo e executa uma função em cada elemento.
+            Recebe dois parâmetros: elemento(valor) e índice.       
+
+            ESTRUTURA
+            -------------x--------------------x------------------x----------------
+            const cursos = ['Html', 'CSS', 'Javascript', 'PHP', 'React']
+            cursos.map((el,i) => {      //"el" recebe o elemento e 'i' recebe o índice do elemento.
+                console.log(`Curso: ${el} - Posição: ${i}`)
+            })
+            -------------xx----------------x<->x------------------xx--------------
+        }
+
+        Método stopPropagation(){
+
+            Método utilizado para que elementos filhos não herdem funções e eventos relacionados a seus elementos pais.
+            Ex: Divs com listeners que tenham botões dentro, e que herdam os seus listeners. Com o método stopPropagation impedimos que esse listener os afete.
+
+            ESTRUTURA
+            -------------x--------------------x------------------x----------------
+            const container = document.getElementsByTagName('div)
+            const btn = [...document.querySelector('.btn')]
+
+            container.addEventListener('click', (evt) => {
+                console.log("Clicou")
+                btn.map((el) => {
+                    el.addEventListener('click', (evt) => {
+                        evt.stopPropagation()
+                    })
+                })
+            })
+            -------------xx----------------x<->x------------------xx--------------
+        }
+
+        Método Filter() {
+
+            Método que proporciona filtrar elementos de um array e retornar em outro.
+            Utiliza três parâmetros: elemento(valor), índice e o próprio array.
+
+            ESTRUTURA
+            -------------x--------------------x------------------x----------------
+            let arr = [1,2,3,4,5,6,7,8,9,10]
+            const filtro = arr.filter((el,ind,arr) => {
+                if(el > 5)
+                    return el
+            })
+
+            console.log(filtro)
+            -------------xx----------------x<->x------------------xx--------------
         }
     }
 }
