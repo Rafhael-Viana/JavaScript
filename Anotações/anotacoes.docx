@@ -766,6 +766,30 @@ D.O.M{
             console.log(filtro)
             -------------xx----------------x<->x------------------xx--------------
         }
+
+        Método Find(){
+
+            Utilizado para encontrar elementos dentro de um array.
+            Retorna "true" ou "false" a depender da existência ou não do elemento no array.
+            Recebe três parâmetros: elemento(valor), índice e o próprio array.
+
+            ESTRUTURA
+            -------------x--------------------x------------------x----------------
+            let arr = [1,2,3,4,5,6,7]
+            const result = arr.find((e,i,a) => {
+                if(e>3)
+                    console.log(e)              
+            })
+
+            //O resultado são os elementos maiores que 3.
+            -------------xx----------------x<->x------------------xx--------------
+        }
+
+        Método Every(){
+
+            Método utilizado para verificar se todos os elementos atendem a uma regra ou característica definida.
+            
+        }
     }
 }
 
