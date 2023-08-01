@@ -1,15 +1,17 @@
-//OBS: Os nomes das funções serão levemente alterados a fim de evitar erros no código. Tenha em mente que todos os nomes utilizados, a depender do contexto, se tratam da mesma função.
+//!OBS: Os nomes das funções serão levemente alterados a fim de evitar erros no código. Tenha em mente que todos os nomes utilizados, a depender do contexto, se tratam da mesma função.
 
 
-//function declaration
+//*function declaration
+
 function minhaFuncao(){
     //faz algo
     console.log("minhaFuncao executada")
 }
 
-//em JavaScript funções são como qualquer outro valor, podem ser armazenadas em variáveis
+//?em JavaScript funções são como qualquer outro valor, podem ser armazenadas em variáveis
 
-//function expression - função atribuída a uma variável
+//*function expression - função atribuída a uma variável
+
 const myFuncao = function(){ // essa é uma função anônima (sem nome)
     //faz algo
     console.log("myFuncao executada")
@@ -23,9 +25,9 @@ const minhAFuncao = () => {  // arrow function
     console.log("minhAFuncao executada")
 }
 
-// Funções recebem argumentos e retornam valores
+//? Funções recebem argumentos e retornam valores
 
-// "Mensagem" é o argumento(ou parâmetro) e o valor é a string retornada + argumento
+//? "Mensagem" é o argumento(ou parâmetro) e o valor é a string retornada + argumento
 
 const minhaFuncao = mensagem => {  // com um único argumento parênteses são opcionais. Com nenhum ou mais de 1 argumento, parênteses são obrigatórios.
     
