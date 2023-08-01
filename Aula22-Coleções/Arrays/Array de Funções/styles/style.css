@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+
+section{
+    margin: 20px;
+}
+section input{
+    display: block;
+    margin-top: 7px;
+    padding: 5px;
+    width: 95vw;
+    outline: none;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+}
+
+#res{
+    display: block;
+    background-color: lightgray;
+    width: 95vw;
+    border-radius: 5px;
+    margin-top: 7px;
+    padding: 5px;
+}
+
+.btn-style{
+    display: inline-block;
+    width: 30px;
+    padding: 12px;
+    text-align: center;
+}
