@@ -659,6 +659,27 @@ D.O.M{
 
         }
 
+        Callback Functions{
+            São funções passadas em forma de argumentos para outras e executadas durante o código.
+            São a base para entender funções assíncronas.
+
+            ESTRUTURA
+            ------------------------------------------------------------------------------------------------
+            function exibir(num){
+                console.log(num)
+            }
+            function soma(a,b,callback){
+                var op = a + b
+                callback(op)
+            }
+            function multiplicar(a,b,callback){
+                var op = a * b
+                callback(op)
+            }
+            soma(2,2,exibir)
+            multiplicar(2,4,exibir)
+        }
+
         Funções Construtoras{
 
             Funções que utilizam o operador new.
@@ -788,7 +809,41 @@ D.O.M{
         Método Every(){
 
             Método utilizado para verificar se todos os elementos atendem a uma regra ou característica definida.
-            
+            Retorna "true" se todos os elementos atendem a regra. Senão, retorna "false".
+
+            ESTRUTURA
+            -------------x--------------------x------------------x----------------
+            let arr = [1,2,3,4,5,6,7]
+            const ret = arr.every((el,i) => {
+                return e>2
+            })
+            console.log(ret)
+
+            //obs: o resultado será false(existem elementos menores que 2).
+            -------------xx----------------x<->x------------------xx--------------
+        }
+
+        Método Some(){
+
+            Método utilizado para verificar se um ou mais elementos atendem a uma regra ou característica definida.
+            Retorna "true" se um ou mais elementos atendem a regra. Senão, retorna "false".
+
+            ESTRUTURA
+            -------------x--------------------x------------------x----------------
+            let arr = [1,2,3,4,5,6,7]
+            const ret = arr.some((el,i) => {
+                return e>2
+            })
+            console.log(ret)
+
+            //obs: o resultado será true(tem 1 ou mais elementos maiores que 2).
+            -------------xx----------------x<->x------------------xx--------------
+        }
+
+        Método Reduce(){
+
+            Permite operar os elementos de um array e retornar um resultado.
+
         }
     }
 }
@@ -893,6 +948,7 @@ Repetições {
             Utilizado para percorrer objetos ou arrays, mas já mostrando o valor de cada elemento.
 }
 Arrays{
+
     Variáveis Simples - Armazenam apenas 1 valor por vez
     Variáveis Compostas - conseguem armazenar vários valores em uma mesma estrutura
 
@@ -936,34 +992,6 @@ Arrays{
         Busca um valor dentro de um vetor(no caso o valor 7), retornando a posição onde o valor se encontra. 
     
 }
-Funções{
-
-    Funções(tarefas ou rotinas) - são ações executadas assim que são chamadas em decorrência de um evento.
-
-        ESTRUTURA
-            Chamada
-            Parâmetro(1/+)
-            Ação
-            Retorno    
-
-            // obs: Nem toda função tem parâmetros e nem toda função tem retorno.
-            // obs: Funções em JavaScript só podem ter 1 retorno.
-
-            -------------------------------------
-            function ação(parâmetros){
-                BLOCO
-                return res
-            }
-            ação(5)
-            --------------------------------------
-
-            //obs: Funções tem propriedade recursiva(quando uma função chama ela mesma)     
-
-    Funções de Construtor{
-        
-        Funções utilizadas geralmente no uso de classes que definem um padrão de construção de elementos.
-    }
-}
 
 Objetos{
     Variável composta com possibilidade de índice literal(é possível nomear os índices, diferentemente de arrays(sempre são 0,1,2...))
@@ -980,6 +1008,7 @@ Objetos{
     Tudo em JavaScript é um objeto(todas as funcionalidades possuem métodos que podem ser utilizados).
     
 }
+
 Instrução THIS{
     
     A instrução THIS sem nenhum escopo definido(sem estar em nenhuma função) sempre vai se referir ao objeto window.
@@ -1000,26 +1029,7 @@ Propriedades Document{
     ----------------------------------------------------------------
 
 }
-Callback Functions{
-    São funções passadas em forma de argumentos para outras e executadas durante o código.
-    São a base para entender funções assíncronas.
 
-    ESTRUTURA
-    ------------------------------------------------------------------------------------------------
-    function exibir(num){
-        console.log(num)
-    }
-    function soma(a,b,callback){
-        var op = a + b
-        callback(op)
-    }
-    function multiplicar(a,b,callback){
-        var op = a * b
-        callback(op)
-    }
-    soma(2,2,exibir)
-    multiplicar(2,4,exibir)
-}
 
 setTimeout e setInterval{
 
@@ -1052,6 +1062,8 @@ clearTimeout e clearInterval{
     
 }
 
-
+Coleções{
+    
+}
 
 
