@@ -1063,7 +1063,9 @@ clearTimeout e clearInterval{
 }
 
 Coleções{
-    
+
+    Conjuntos pré-definidos de métodos relacionados a objetos root da linguagem JavaScript.
+
 }
 
 
