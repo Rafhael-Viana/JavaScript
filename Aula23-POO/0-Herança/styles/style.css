@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+}
+.carros{
+    display: flex;
+    width: 100%;
+    border: 3px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+.carro{
+    border: 3px solid #008;
+    background-color: #8cf;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    width: 200px;
+}
