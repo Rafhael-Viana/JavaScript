@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="script.js"></script>
+    <title>POO | Herança</title>
+</head>
+<body>
+    <main>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome">
+        
+            <label for="portas">Portas:</label>
+            <input type="number" name="portas" id="portas" placeholder="0">
+        
+            <label for="blind">Blindagem:</label>
+            <input type="number" name="blind" id="blind" placeholder="0" disabled>
+
+            <label for="munic">Munição:</label>
+            <input type="number" name="munic" id="munic" placeholder="0" disabled>
+        </form>
+        
+        <section id="rad">
+            <div>
+                <input type="radio" name="tipo" id="tipo_norm">
+                <label for="tipo_norm">Normal</label>
+            </div>
+
+            <div>
+                <input type="radio" name="tipo" id="tipo_milit">
+                <label for="tipo_milit">Militar</label>
+            </div>
+        </section>
+        
+        <input onclick="exibirCarros()" type="button" value="Adicionar" id="btn_addCarro">
+        
+        <div id="carros"></div>
+    </main>
+</body>
+</html>
